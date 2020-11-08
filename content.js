@@ -1,17 +1,17 @@
 
 //hide context box
 var hideContext = function(){
-    $('#clarify-box').hide();
+    $('ytd-clarification-renderer').hide();
 }
 
 //show context box
 var unhideContext = function() {
-	$('#clarify-box').show();
+	$('ytd-clarification-renderer').show();
 }
 
 var addListeners=function(){
     hideContext();
- 
+
     $(window).scroll(function(){
         hideContext();
     });
@@ -33,13 +33,13 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)    
 });
 
 //on init perform based on chrome storage value
-window.onload=function(){  
+window.onload=function(){
     chrome.storage.sync.get('hide', function(data) {
         if(data.hide){
             addListeners();
         }else{
             removeListeners();
-        } 
+        }
     });
 }
 
