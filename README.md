@@ -1,5 +1,5 @@
 # HideContext
-Chrome extension to hide images from Quora (To avoid explicit content)
+Chrome extension to hide Youtube Context
 
 To use this extension locally 
 
